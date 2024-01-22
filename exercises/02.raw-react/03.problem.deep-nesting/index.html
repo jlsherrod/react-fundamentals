@@ -17,9 +17,13 @@
 		const element = React.createElement('div', {
 			className: 'container',
 			children: [
-				React.createElement('span', null, 'Hello'),
-				' ',
-				React.createElement('span', null, 'World'),
+				React.createElement('p', null, "Here's Sam's favorite food:"),
+				React.createElement('ul', {
+					className: 'sams-food',
+					children: [
+						React.createElement('li', {}, 'Green Eggs'),
+						React.createElement('li', {}, 'Ham')
+					], })
 			],
 		})
 		ReactDOM.createRoot(rootElement).render(element)
