@@ -5,16 +5,13 @@
 	<script type="module">
 		const rootElement = document.getElementById('root')
 		const element = React.createElement('div', {
-			className: 'container',
-			// 🐨 turn this children prop into an array with three elements:
-			// 1: a span that has the text "Hello"
-			// 2: a string with the text " "
-			// 3: a span that has the text "World"
-			// 🦉 also play around with using the third argument to createElement
-			// for children instead of the children prop...
-			// https://react.dev/reference/react/createElement
-			children: 'Hello World',
+		className: 'container',
+		children: [
+			React.createElement('span', null, 'Hello'),
+			' ',
+			React.createElement('span', {}, 'World')
+		 ],
 		})
-		ReactDOM.createRoot(rootElement).render(element)
+		ReactDOM.render(element, rootElement)
 	</script>
 </body>
